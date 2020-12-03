@@ -1,19 +1,14 @@
-use std::io::{self, BufReader};
-use std::io::prelude::*;
-use std::fs::File;
+use crate::aoc_2020_solutions::load_data;
+use std::io;
 
-pub fn solve(data_dir: String, part : i32) -> io::Result<()>  {
-    println!("Generating Solution for Advent of Code 2020 - Day 1 / Part {}", part);
-    let filename = data_dir + "day1-input.txt";
-    println!("Reading input file {} to solve Part {}", filename, part);
+pub fn solve(filename: String, day : usize, part : usize) -> io::Result<()>  {
+    println!("Generating Solution for Advent of Code 2020 - Day {} / Part {}", day, part);
 
-    let file = File::open(filename)?;
-    let file = BufReader::new(file);
+    let mut data: Vec<String> = Vec::new();
+    load_data(filename, day, part, &mut data)?;
 
-    // read file into vector, claims
-    let claims: Vec<i64> = file
-        .lines()
-        .map(|line| line.unwrap().parse::<i64>().unwrap())
+    let claims: Vec<i64> = data.iter()
+        .map(|line| line.parse::<i64>().unwrap())
         .collect();
 
     if part == 1 {

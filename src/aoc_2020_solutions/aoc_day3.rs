@@ -1,6 +1,5 @@
-use std::io::{self, BufReader};
-use std::io::prelude::*;
-use std::fs::File;
+use crate::aoc_2020_solutions::load_data;
+use std::io;
 
 fn get_tree_count(hillside: &Vec<String>, down_slope: usize, cross_slope: usize) -> usize {
     let mut tree_count = 0;
@@ -18,20 +17,11 @@ fn get_tree_count(hillside: &Vec<String>, down_slope: usize, cross_slope: usize)
     tree_count
 }
 
-pub fn solve(data_dir: String, part : i32) -> io::Result<()>  {
-    println!("Generating Solution for Advent of Code 2020 - Day 3 / Part {}", part);
-    let filename = data_dir + "day3-input.txt";
-    //let filename = data_dir + "day3-test-input.txt";
-    println!("Reading input file {} to solve Part {}", filename, part);
+pub fn solve(filename: String, day : usize, part : usize) -> io::Result<()>  {
+    println!("Generating Solution for Advent of Code 2020 - Day {} / Part {}", day, part);
 
-    let file = File::open(filename)?;
-    let file = BufReader::new(file);
-
-    // read file into vector, password_entries
-    let hillside: Vec<String> = file
-        .lines()
-        .map(|line| line.unwrap())
-        .collect();
+    let mut hillside: Vec<String> = Vec::new();
+    load_data(filename, day, part, &mut hillside)?;
 
     if part == 1{
         let slopes = vec![(1,3)];

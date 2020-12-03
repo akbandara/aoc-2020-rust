@@ -1,20 +1,12 @@
-use std::io::{self, BufReader};
-use std::io::prelude::*;
-use std::fs::File;
+use crate::aoc_2020_solutions::load_data;
+use std::io;
 
-pub fn solve(data_dir: String, part : i32) -> io::Result<()>  {
-    println!("Generating Solution for Advent of Code 2020 - Day 2 / Part {}", part);
-    let filename = data_dir + "day2-input.txt";
-    println!("Reading input file {} to solve Part {}", filename, part);
-
-    let file = File::open(filename)?;
-    let file = BufReader::new(file);
+pub fn solve(filename: String, day : usize, part : usize) -> io::Result<()>  {
+    println!("Generating Solution for Advent of Code 2020 - Day {} / Part {}", day, part);
 
     // read file into vector, password_entries
-    let password_entries: Vec<String> = file
-        .lines()
-        .map(|line| line.unwrap())
-        .collect();
+    let mut password_entries: Vec<String> = Vec::new();
+    load_data(filename, day, part, &mut password_entries)?;
 
     let mut valid_password_count = 0;
     for password_entry in password_entries {
