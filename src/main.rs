@@ -1,5 +1,3 @@
-extern crate csv;
-
 use std::env;
 use aoc_2020_rust::aoc_2020_solutions::*;
 
@@ -13,7 +11,8 @@ fn main() {
 
     match aoc_day {
         1 => aoc_day1::solve(data_dir.to_string(), *aoc_day_part).ok(),
-        _ => aoc_no_solution::solve(data_dir.to_string(), *aoc_day_part).ok(),
+        2 => aoc_day2::solve(data_dir.to_string(), *aoc_day_part).ok(),
+        _ => aoc_no_solution::solve(data_dir.to_string(), *aoc_day).ok(),
     };
     
 }
