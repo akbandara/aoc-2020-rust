@@ -39,7 +39,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["data/day4-test-input-2.txt", "4", "2"],
+            "args": ["data/day5-input.txt", "5", "2"],
             "cwd": "${workspaceFolder}"
         },
         {
