@@ -8,3 +8,4 @@ Run code by specifying the AOC day and part to be solved, together with the inpu
  * **Day 1:** "Report Repair" - iteration, arithmetic calculation and exhaustive search (aoc_day1.rs)
  * **Day 2:** "Password Philosophy" - iteration, string parsing and searching (aoc_day2.rs)
  * **Day 3:** "Toboggan Trajectory" - iteration, modulo arithmetic, string parsing (aoc_day3.rs)
+ * **Day 4:** "Passport Processing" - iteraction, string parsing, regular expressions (aoc_day4.rs)
