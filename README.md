@@ -10,3 +10,4 @@ Run code by specifying the AOC day and part to be solved, together with the inpu
  * **Day 3:** "Toboggan Trajectory" - iteration, modulo arithmetic, string parsing (aoc_day3.rs)
  * **Day 4:** "Passport Processing" - iteration, string parsing, regular expressions (aoc_day4.rs)
  * **Day 5:** "Binary Boarding" - binary search, vector sort (aoc_day5.rs)
+ * **Day 6:** "Custom Customs" - character frequency counting (aoc_day6.rs)
