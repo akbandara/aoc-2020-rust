@@ -35,7 +35,7 @@ pub fn solve(filename: String, day : usize, part : usize) -> io::Result<()>  {
                 }   
             }
 
-            // valid response if value of response_count = number of lines
+            // valid response if value of response_count = number of people in the group
             for response in response_count.iter() {
 
                 if *response == group_customs_form.len() {
