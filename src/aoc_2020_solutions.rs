@@ -8,6 +8,7 @@ pub mod aoc_day2;
 pub mod aoc_day3;
 pub mod aoc_day4;
 pub mod aoc_day5;
+pub mod aoc_day6;
 pub mod aoc_no_solution;
 
 pub fn load_data(filename:String, day:usize, part:usize, data:&mut Vec<String>) -> io::Result<()> {

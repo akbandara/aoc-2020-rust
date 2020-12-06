@@ -15,6 +15,7 @@ fn main() {
         3 => aoc_day3::solve(data_dir.to_string(), *aoc_day, *aoc_day_part).ok(),
         4 => aoc_day4::solve(data_dir.to_string(), *aoc_day, *aoc_day_part).ok(),
         5 => aoc_day5::solve(data_dir.to_string(), *aoc_day, *aoc_day_part).ok(),
+        6 => aoc_day6::solve(data_dir.to_string(), *aoc_day, *aoc_day_part).ok(),
         _ => aoc_no_solution::solve(data_dir.to_string(), *aoc_day, *aoc_day_part).ok(),
     };
     
